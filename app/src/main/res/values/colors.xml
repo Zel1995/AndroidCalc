@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- func buttons color  -->
+    <color name="funcButtonBgColor">#333333</color>
+    <color name="funcButtonTxtColor">#c4c4c4</color>
+    <!-- num buttons color  -->
+    <color name="numButtonBgColor">#c4c4c4</color>
+    <color name="numButtonTxtColor">#333333</color>
+    <!-- equal button color  -->
+    <color name="equalButtonBgColor">#FF8D00</color>
+    <color name="equalButtonTxtColor">#c4c4c4</color>
 </resources>
