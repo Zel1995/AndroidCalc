@@ -9,10 +9,11 @@
     <TextView
         android:id="@+id/tv_input"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="fill_horizontal"
         android:text="@string/input_text"
         android:textSize="50sp"
-        android:gravity="fill_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_settings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/gridLayout"
         app:layout_constraintTop_toTopOf="@+id/gridLayout" />
@@ -20,11 +21,12 @@
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_margin="10dp"
         android:gravity="fill"
         android:text="@string/_0"
         android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -181,5 +183,16 @@
             android:text="@string/_00" />
 
     </GridLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_settings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/funcButtonBgColor"
+        android:text="@string/settings"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gridLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

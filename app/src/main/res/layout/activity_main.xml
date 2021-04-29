@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.CalculatorActivity">
 
@@ -174,6 +175,17 @@
             android:text="@string/_00" />
 
     </GridLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/funcButtonTxtColor"
+        android:backgroundTint="@color/funcButtonBgColor"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="2dp"
+        app:cornerRadius="10dp"/>
 
 
 </LinearLayout>

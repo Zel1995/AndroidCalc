@@ -1,5 +1,7 @@
 package com.example.mycalc.ui;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         data = new CalculatorData();
         initTextViews();
         initButtons();
+        initSettingsButton();
         if (savedInstanceState == null) {
             presenter = new CalculatorPresenter(this, new CalculatorImpl());
         } else {
@@ -143,29 +146,42 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     }
 
     private void initButtons() {
-        findViewById(R.id.btn_0).setOnClickListener(this);
-        findViewById(R.id.btn_00).setOnClickListener(this);
-        findViewById(R.id.btn_1).setOnClickListener(this);
-        findViewById(R.id.btn_2).setOnClickListener(this);
-        findViewById(R.id.btn_3).setOnClickListener(this);
-        findViewById(R.id.btn_4).setOnClickListener(this);
-        findViewById(R.id.btn_5).setOnClickListener(this);
-        findViewById(R.id.btn_6).setOnClickListener(this);
-        findViewById(R.id.btn_7).setOnClickListener(this);
-        findViewById(R.id.btn_8).setOnClickListener(this);
-        findViewById(R.id.btn_9).setOnClickListener(this);
-        findViewById(R.id.btn_divide).setOnClickListener(this);
-        findViewById(R.id.btn_multiply).setOnClickListener(this);
-        findViewById(R.id.btn_minus).setOnClickListener(this);
-        findViewById(R.id.btn_plus).setOnClickListener(this);
-        findViewById(R.id.btn_clear).setOnClickListener(this);
-        findViewById(R.id.btn_equals).setOnClickListener(this);
-        findViewById(R.id.btn_dot).setOnClickListener(this);
-        findViewById(R.id.btn_square).setOnClickListener(this);
+        int[] buttons = new int []{R.id.btn_0,
+                R.id.btn_00,
+                R.id.btn_1,
+                R.id.btn_2,
+                R.id.btn_3,
+                R.id.btn_4,
+                R.id.btn_5,
+                R.id.btn_6,
+                R.id.btn_7,
+                R.id.btn_8,
+                R.id.btn_9,
+                R.id.btn_divide,
+                R.id.btn_multiply,
+                R.id.btn_minus,
+                R.id.btn_plus,
+                R.id.btn_clear,
+                R.id.btn_equals,
+                R.id.btn_dot,
+                R.id.btn_square};
+        for (int button : buttons) {
+            findViewById(button).setOnClickListener(this);
+        }
     }
 
     private void initTextViews() {
         userInputTv = findViewById(R.id.tv_input);
         resultTv = findViewById(R.id.tv_result);
+    }
+
+    private void initSettingsButton() {
+        findViewById(R.id.btn_settings).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalculatorActivity.this,SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
