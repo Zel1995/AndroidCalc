@@ -2,6 +2,10 @@
     <!-- Base application theme. -->
     <style name="Theme.MyCalc" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="android:statusBarColor">#333333</item>
+    </style>
+
+    <style name="Theme.MyCalc2" parent="Theme.MaterialComponents">
+        <item name="android:textViewStyle">@style/myTextView</item>
         <item name="toolbarStyle">@style/myToolBar</item>
     </style>
 </resources>

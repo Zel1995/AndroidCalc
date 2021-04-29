@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SettingsActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_myCalc"
+        android:text="@string/set_default_theme"
+        style="@style/themeButtons"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_myCalc2"
+        android:text="@string/set_dark_theme"
+        android:layout_marginStart="10dp"
+        style="@style/themeButtons"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/accept_and_close"
+        style="@style/equalButtonStyle"/>
+</LinearLayout>
